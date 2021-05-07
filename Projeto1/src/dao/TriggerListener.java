@@ -3,7 +3,9 @@ package dao;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.Period;
+import java.time.temporal.ChronoUnit;
 import java.time.Duration;
+import java.time.*;
 
 import javax.persistence.PostLoad;
 import javax.persistence.PostPersist;
@@ -26,7 +28,7 @@ public class TriggerListener{  // usada pela classe Visualizacao
 		if (obj instanceof Visualizacao)  {
 			Visualizacao vs = (Visualizacao)obj;
 			System.out.println("   Ingresso da Nota (Idade) [" +vs.getNota() + "]= "+  vs.getAge() );
-			int idade = calcularIdade( vs );
+			Long idade = calcularIdade( vs );
 			vs.setAge(idade);
 			System.out.println("   Tempo Calculado [" +vs.getNota() + "]=  "+  idade );
 		}
@@ -40,7 +42,7 @@ public class TriggerListener{  // usada pela classe Visualizacao
 		if (obj instanceof Visualizacao)  {
 			Visualizacao vs = (Visualizacao)obj;
 			System.out.println("   Ingresso da Nota (Idade) [" +vs.getNota() + "]= "+  vs.getAge() );
-			int idade = calcularIdade( vs );
+			Long idade = calcularIdade( vs );
 			vs.setAge(idade);
 			System.out.println("   Tempo Calculado [" +vs.getNota() + "]=  "+  idade );
 		}
@@ -53,7 +55,7 @@ public class TriggerListener{  // usada pela classe Visualizacao
 		if (obj instanceof Visualizacao)  {
 			Visualizacao vs = (Visualizacao)obj;
 			System.out.println("   Ingresso da Nota (Idade) [" +vs.getNota() + "]= "+  vs.getAge() );
-			int idade = calcularIdade( vs );
+			Long idade = calcularIdade( vs );
 			vs.setAge(idade);
 			System.out.println("   Tempo Calculado [" +vs.getNota() + "]=  "+  idade );
 		}
@@ -66,10 +68,10 @@ public class TriggerListener{  // usada pela classe Visualizacao
 	}
 
 	//============================================================
-	public int calcularIdade(Visualizacao v) {
-		LocalDate hoje = LocalDate.now();
-		Period per = Period.between(v.getDataHora(), hoje);
-		int idade = per.getYears();
+	public long calcularIdade(Visualizacao v) {
+		LocalDateTime hoje = LocalDateTime.now();
+		Duration per = Duration.between(v.getDataHora(), hoje);
+		Long idade = ChronoUnit.YEARS.between(LocalDateTime.now(), LocalDateTime.now().plus(per) );
 		return idade;
 	}
 

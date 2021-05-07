@@ -28,15 +28,15 @@ public class Visualizacao {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
 	
-	@Column(columnDefinition = "DATE")	
-	private LocalDate datahora = LocalDate.now();
+	@Column(columnDefinition = "TIMESTAMP")	
+	private LocalDateTime datahora = LocalDateTime.now();
 	private int nota;
 	
 	@Version
 	private Long version;
 	
 	@Transient
-	private int idade;
+	private Long idade;
 	
 	@ManyToOne
 	private Usuario usuario;
@@ -71,15 +71,15 @@ public class Visualizacao {
 		return this.nota;
 	}
 	
-	public int getAge() {		//Method add
+	public Long getAge() {		//Method add
 		return this.idade;
 	}
 	
-	public void setAge(int idade) { 	//Method add
+	public void setAge(Long idade) { 	//Method add
 		this.idade= idade;
 	}
 	
-	public LocalDate getDataHora() {		//Method add
+	public LocalDateTime getDataHora() {		//Method add
 		return this.datahora;
 	}
 
