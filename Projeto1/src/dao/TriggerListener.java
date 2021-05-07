@@ -25,7 +25,7 @@ public class TriggerListener{  // usada pela classe Visualizacao
 		System.out.println(" @PostPersist... " + obj.getClass().getSimpleName());
 		if (obj instanceof Visualizacao)  {
 			Visualizacao vs = (Visualizacao)obj;
-			System.out.println("   Ingresso da Nota [" +vs.getNota() + "]= "+  vs.getAge() );
+			System.out.println("   Ingresso da Nota (Idade) [" +vs.getNota() + "]= "+  vs.getAge() );
 			int idade = calcularIdade( vs );
 			vs.setAge(idade);
 			System.out.println("   Tempo Calculado [" +vs.getNota() + "]=  "+  idade );
@@ -39,7 +39,7 @@ public class TriggerListener{  // usada pela classe Visualizacao
 		System.out.println(" @PostPersist... " + obj.getClass().getSimpleName());
 		if (obj instanceof Visualizacao)  {
 			Visualizacao vs = (Visualizacao)obj;
-			System.out.println("   Ingresso da Nota [" +vs.getNota() + "]= "+  vs.getAge() );
+			System.out.println("   Ingresso da Nota (Idade) [" +vs.getNota() + "]= "+  vs.getAge() );
 			int idade = calcularIdade( vs );
 			vs.setAge(idade);
 			System.out.println("   Tempo Calculado [" +vs.getNota() + "]=  "+  idade );
@@ -52,7 +52,7 @@ public class TriggerListener{  // usada pela classe Visualizacao
 		System.out.println(" @PostPersist... " + obj.getClass().getSimpleName());
 		if (obj instanceof Visualizacao)  {
 			Visualizacao vs = (Visualizacao)obj;
-			System.out.println("   Ingresso da Nota [" +vs.getNota() + "]= "+  vs.getAge() );
+			System.out.println("   Ingresso da Nota (Idade) [" +vs.getNota() + "]= "+  vs.getAge() );
 			int idade = calcularIdade( vs );
 			vs.setAge(idade);
 			System.out.println("   Tempo Calculado [" +vs.getNota() + "]=  "+  idade );

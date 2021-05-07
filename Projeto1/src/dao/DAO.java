@@ -57,7 +57,7 @@ public abstract class DAO<T> implements DAOInterface<T> {
 			ip = dados.getProperty("ip");
 			Properties prop = new Properties();
 			if(sgbd.equals("postgres"))
-				prop.setProperty("javax.persistence.jdbc.url", "jdbc:postgresql://"+ip+":5432/projetoJPAtest");
+				prop.setProperty("javax.persistence.jdbc.url", "jdbc:postgresql://"+ip+":5432/projeto3");
 			if(sgbd.equals("mysql"))
 				prop.setProperty("javax.persistence.jdbc.url", "jdbc:mysql://"+ip+":3306/agenda?createDatabaseIfNotExist=true");
 

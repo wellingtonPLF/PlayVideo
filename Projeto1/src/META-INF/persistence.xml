@@ -12,7 +12,7 @@ xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/x
 			<property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" /> 
 		    <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://127.0.0.1:5432/projeto3" /> 
 		    <property name="javax.persistence.jdbc.user" value="postgres" />
-		    <property name="javax.persistence.jdbc.password" value="w10ell10" />
+		    <property name="javax.persistence.jdbc.password" value="ifpb" />
     		<property name="javax.persistence.schema-generation.database.action" value="create"/> 
             <property name="javax.persistence.schema-generation.scripts.action" value="create"/>  
             <property name="javax.persistence.schema-generation.scripts.create-target" value="ddl.txt"/>                

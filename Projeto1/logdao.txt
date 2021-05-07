@@ -1,3 +1,3 @@
-23:03:46,227  INFO DAO:47 - processando a unidade de persistencia: eclipselink-postgres
-23:03:46,232  INFO DAO:64 - url= jdbc:postgresql://127.0.0.1:5432/projetoJPAtest
-23:03:46,400 DEBUG logging:38 - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+10:10:10,869  INFO DAO:47 - processando a unidade de persistencia: eclipselink-postgres
+10:10:10,871  INFO DAO:64 - url= jdbc:postgresql://54.94.169.84:5432/projeto3
+10:10:10,963 DEBUG logging:38 - Logging Provider: org.jboss.logging.Log4jLoggerProvider

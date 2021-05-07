@@ -19,7 +19,7 @@ public class Video {
 	private String nome;
 	
 	@Version
-	private String version;
+	private Long version;
 	
 	@Column(columnDefinition = "TIMESTAMP")	
 	private LocalDateTime datahora = LocalDateTime.now();

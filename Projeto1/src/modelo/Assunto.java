@@ -16,7 +16,7 @@ public class Assunto {
 	private String palavra;
 	
 	@Version
-	private String version;
+	private Long version;
 	
 	@ManyToMany(cascade={CascadeType.PERSIST,CascadeType.MERGE})
 	private List<Video> videos = new ArrayList<>();

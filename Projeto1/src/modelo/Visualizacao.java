@@ -33,7 +33,7 @@ public class Visualizacao {
 	private int nota;
 	
 	@Version
-	private String version;
+	private Long version;
 	
 	@Transient
 	private int idade;

@@ -16,7 +16,7 @@ public class Usuario {
 	private String email;
 	
 	@Version
-	private String version;
+	private Long version;
 	
 	@OneToMany(mappedBy="usuario", 
 			cascade=CascadeType.ALL, 	
